@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+            <span class="cover-name">Jodoh</span>
+            <span class="cover-ampersand">&</span>
+            <span class="cover-name">Suci</span>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Undangan Pernikahan Jodoh & Suci">
+
+    <title>Undangan Pernikahan | Jodoh & Suci</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MUSIK
+===================================================== -->
+
+<video id="musik"
+       playsinline
+       preload="auto">
+
+    <source src="video/lagu.mp4"
+            type="video/mp4">
+
+</video>
+
+
+<!-- TOMBOL MUSIK -->
+
+<button id="musicButton"
+        class="music-button"
+        onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+
+
+<!-- =====================================================
+     COVER
+===================================================== -->
+
+<section class="cover">
+
+    <div class="cover-overlay"></div>
+
+    <div class="cover-content">
+
+        <p class="small-title">
+            THE WEDDING OF
+        </p>
+
+
+        <h1>
+            Jodoh
+            <br>
+            <span>&</span>
+            <br>
+            Suci
+        </h1>
+
+
+        <div class="ornament">
+            ❦
+        </div>
+
+
+        <p class="kepada">
+            Kepada Yth.
+        </p>
+
+
+        <h2 id="namaTamu">
+            Tamu Undangan
+        </h2>
+
+
+        <p class="cover-text">
+            Tanpa mengurangi rasa hormat,
+            kami mengundang Anda untuk hadir
+            di hari bahagia kami.
+        </p>
+
+
+        <button class="open-button"
+                onclick="bukaUndangan()">
+
+            💌 Buka Undangan
+
+        </button>
+
+        <p class="cover-disclaimer">
+            Mohon maaf apabila ada kesalahan dalam penulisan nama atau gelar.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ISI UNDANGAN
+===================================================== -->
+
+<main id="undangan">
+
+
+<!-- =====================================================
+     PEMBUKA
+===================================================== -->
+
+<section class="section opening">
+
+    <div class="countdown-section">
+
+        <div class="countdown-content">
+
+            <p class="section-label">
+                Save The Date
+            </p>
+
+
+            <h2 class="section-title">
+                Menuju Hari Bahagia
+            </h2>
+
+
+            <div class="countdown">
+
+                <div class="count-box">
+                    <span id="days">00</span>
+                    <small>Hari</small>
+                </div>
+
+                <div class="count-box">
+                    <span id="hours">00</span>
+                    <small>Jam</small>
+                </div>
+
+                <div class="count-box">
+                    <span id="minutes">00</span>
+                    <small>Menit</small>
+                </div>
+
+                <div class="count-box">
+                    <span id="seconds">00</span>
+                    <small>Detik</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="ornament">
+        
+    </div>
+
+
+    <p class="quote">
+
+        "Dan di antara tanda-tanda kekuasaan-Nya
+        ialah Dia menciptakan untukmu pasangan
+        hidup dari jenismu sendiri supaya kamu
+        merasa tenteram kepadanya."
+
+    </p>
+
+
+    <p class="ayat">
+        QS. Ar-Rum : 21
+    </p>
+
+
+    <p class="description">
+
+        Tanpa mengurangi rasa hormat, kami bermaksud 
+        mengundang Bapak/Ibu?saudara/i untuk menghadiri acara pernikahan kami
+        
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEMPELAI
+===================================================== -->
+
+<section class="section couple-section">
+
+    <p class="section-label">
+        Mempelai
+    </p>
+
+
+    <div class="couple">
+
+
+        <!-- MEMPELAI PRIA -->
+
+        <div class="person">
+    <div class="photo-frame">
+        <img src="images/pengantin-pria.jpg" alt="Mempelai Pria">
+    </div>
+
+    <h3>Jodoh</h3>
+
+    <p class="child-of">Putra dari</p>
+
+    <p>Bapak Nama Ayah<br>& Ibu Nama Ibu</p>
+</div>
+
+
+
+        <!-- MEMPELAI WANITA -->
+
+        <div class="person">
+    <div class="photo-frame">
+        <img src="images/pengantin-wanita.jpg" alt="Mempelai Wanita">
+    </div>
+
+    <h3>Suci</h3>
+
+    <p class="child-of">Putri dari</p>
+
+    <p>Bapak Nama Ayah<br>& Ibu Nama Ibu</p>
+</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DETAIL ACARA
+===================================================== -->
+
+<section class="section event-section">
+
+    <p class="section-label">
+        Wedding Event
+    </p>
+
+
+    <h2 class="section-title">
+        Waktu & Tempat
+    </h2>
+
+
+    <div class="event-card event-card-combined">
+
+        <div class="event-icon">✦</div>
+
+        <div class="event-details">
+            <h3>Akad Nikah</h3>
+            <p class="event-date">Minggu, 20 Desember 2026</p>
+            <p>09.00 WIB - Selesai</p>
+            <p class="event-location">Kediaman Mempelai Wanita<br>Yogyakarta</p>
+        </div>
+
+        <div class="event-details">
+            <h3>Resepsi</h3>
+            <p class="event-date">Minggu, 20 Desember 2026</p>
+            <p>11.00 - 14.00 WIB</p>
+            <p class="event-location">Kediaman Mempelai Wanita<br>Yogyakarta</p>
+        </div>
+
+    </div>
+
+
+    <a href="https://maps.google.com"
+       target="_blank"
+       class="map-button">
+
+        📍 Lihat Lokasi
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALERI
+===================================================== -->
+
+<section class="section gallery-section">
+
+    <p class="section-label">
+        Our Moments
+    </p>
+
+
+    <h2 class="section-title">
+        Galeri
+    </h2>
+
+
+    <div class="gallery">
+
+
+        <img src="images/foto1.jpg"
+             alt="Foto Pernikahan">
+
+
+        <img src="images/foto2.jpg"
+             alt="Foto Pernikahan">
+
+
+        <img src="images/foto3.jpg"
+             alt="Foto Pernikahan">
+
+
+        <img src="images/foto4.jpg"
+             alt="Foto Pernikahan">
+
+
+    </div>
+
+</section>
+
+
+
+<!-- WEDDING GIFT + WISHES & RSVP -->
+<section class="gift-rsvp-section">
+
+    <div class="gift-rsvp-content">
+
+        <div class="gift-intro">
+            <h2 class="gift-title">WEDDING GIFT</h2>
+
+            <p class="gift-description">
+                Doa restu Anda merupakan karunia yang sangat berarti bagi kami.
+            </p>
+
+            <p class="gift-description">
+                Jika ingin memberikan tanda kasih, Anda dapat memberi kado secara cashless.
+            </p>
+
+            <details class="gift-details">
+                <summary>Kirim Gift</summary>
+                <div class="rekening">
+                    <p class="bank-name">BCA</p>
+                    <p class="rekening-number">1234567890</p>
+                    <p>a.n. Suci</p>
+                    <button type="button" onclick="salinRekening()" class="copy-button">
+                        Salin Nomor Rekening
+                    </button>
+                </div>
+            </details>
+        </div>
+
+        <section class="wishes-rsvp" aria-labelledby="wishesTitle">
+            <h2 class="wishes-title" id="wishesTitle">Wishes &amp; RSVP</h2>
+            <p class="wishes-copy">Silakan isi nama, konfirmasi kehadiran, serta ucapan dan doa.</p>
+
+            <form class="rsvp-form" onsubmit="kirimRSVP(event)">
+                <div class="form-field">
+                    <label for="guestName">Nama tamu</label>
+                    <input id="guestName" name="nama" type="text" autocomplete="name" maxlength="80" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="attendance">Konfirmasi kehadiran</label>
+                    <select id="attendance" name="kehadiran" required>
+                        <option value="" disabled selected>Pilih konfirmasi</option>
+                        <option value="Hadir">Hadir</option>
+                        <option value="Tidak dapat hadir">Tidak dapat hadir</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="guestMessage">Ucapan &amp; doa</label>
+                    <textarea id="guestMessage" name="ucapan" rows="4" maxlength="1000" required></textarea>
+                </div>
+
+                <button class="whatsapp-button rsvp-submit" type="submit">
+                    Kirim via WhatsApp
+                </button>
+            </form>
+        </section>
+
+        <div class="final-thankyou">
+            <p>Atas doa, restu, dan kehadiran Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih.</p>
+            <div class="ornament">❦</div>
+            <h3>Suci &amp; Fajar</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TURUT MENGUNDANG
+===================================================== -->
+
+<section class="family-section">
+
+    <div class="section">
+
+        <p class="section-label">
+            Turut Mengundang
+        </p>
+
+
+        <h2 class="section-title">
+            Keluarga Besar
+        </h2>
+
+
+        <div class="family-container">
+
+
+            <!-- KELUARGA WANITA -->
+
+            <div class="family">
+
+                <h3>
+                    Keluarga Mempelai Wanita
+                </h3>
+
+
+                <p>
+                    Bapak Nama Ayah
+                </p>
+
+                <p>
+                    Ibu Nama Ibu
+                </p>
+
+                <p>
+                    Kakak / Adik
+                </p>
+
+                <p>
+                    Kakak / Adik
+                </p>
+
+            </div>
+
+
+
+            <!-- KELUARGA PRIA -->
+
+            <div class="family">
+
+                <h3>
+                    Keluarga Mempelai Pria
+                </h3>
+
+
+                <p>
+                    Bapak Nama Ayah
+                </p>
+
+                <p>
+                    Ibu Nama Ibu
+                </p>
+
+                <p>
+                    Kakak / Adik
+                </p>
+
+                <p>
+                    Kakak / Adik
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        </div>
+
+        <footer class="family-footer">
+            <p>© 2026 Jodoh &amp; Suci</p>
+            <p>Wedding Invitation</p>
+        </footer>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- DEKORASI BUNGA -->
+<img src="images/bunga-sudut.png"
+    class="bunga-sudut bunga-kiri-atas"
+    alt="">
+
+<img src="images/bunga-sudut.png"
+    class="bunga-sudut bunga-kanan-atas"
+    alt="">
+
+<img src="images/bunga-sudut.png"
+    class="bunga-sudut bunga-kiri-bawah"
+    alt="">
+
+<img src="images/bunga-sudut.png"
+    class="bunga-sudut bunga-kanan-bawah"
+    alt="">
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

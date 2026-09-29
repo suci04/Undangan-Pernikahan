@@ -1,0 +1,1570 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    background: #f8f4ed;
+
+    color: #4b5545;
+
+    line-height: 1.8;
+
+    overflow-x: hidden;
+}
+
+
+.cover,
+main > section,
+main > footer {
+    min-height: 100vh;
+    min-height: 100svh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+
+/* =====================================================
+   WARNA
+===================================================== */
+
+:root {
+
+    --cream: #f8f4ed;
+
+    --cream-dark: #eee7da;
+
+    --sage: #71806a;
+
+    --sage-dark: #4f5d4c;
+
+    --gold: #b39a62;
+
+    --text: #4b5545;
+
+    --white: #ffffff;
+
+}
+
+
+/* =====================================================
+   COVER
+===================================================== */
+
+.cover {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background-image:
+        url("images/cover.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.cover-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(40, 55, 40, 0.50),
+            rgba(40, 55, 40, 0.60)
+        );
+
+}
+
+
+.cover-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 650px;
+
+    padding: 30px;
+
+    animation: fadeIn 2s ease;
+
+}
+
+
+.small-title {
+
+    position: relative;
+
+    top: -10px;
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.cover h1 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: clamp(55px, 12vw, 90px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    position: relative;
+
+    top: -10px;
+
+    white-space: nowrap;
+
+}
+
+
+.cover h1 span {
+
+    font-size: 55%;
+
+    display: inline-block;
+
+    margin: 0 10px;
+
+    color: #e4d5a8;
+
+}
+
+
+.ornament {
+
+    color: var(--gold);
+
+    font-size: 30px;
+
+    margin: 15px 0;
+
+}
+
+
+.kepada {
+
+    margin-top: 38px;
+
+    font-size: 14px;
+
+}
+
+
+#namaTamu {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    margin: 5px 0 15px;
+
+}
+
+
+.cover-text {
+
+    font-size: 13px;
+
+    max-width: 430px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.open-button,
+.map-button,
+.whatsapp-button,
+.copy-button {
+
+    display: inline-block;
+
+    border: none;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    padding: 13px 24px;
+
+    border-radius: 50px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    transition: 0.3s;
+
+}
+
+
+.open-button {
+
+    margin-top: 25px;
+
+    background: #ffffff;
+
+    color: var(--sage-dark);
+
+}
+
+
+.open-button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.map-button {
+
+    margin-top: 25px;
+
+    background: var(--sage);
+
+    color: white;
+
+}
+
+
+.whatsapp-button {
+
+    margin-top: 25px;
+
+    background: #667560;
+
+    color: white;
+
+}
+
+
+.copy-button {
+
+    margin-top: 15px;
+
+    background: var(--sage);
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 80px 25px;
+
+    text-align: center;
+
+}
+
+
+.section-label {
+
+    color: var(--gold);
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+}
+
+
+.section-title {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: clamp(38px, 8vw, 55px);
+
+    line-height: 1.1;
+
+    color: var(--sage-dark);
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =====================================================
+   PEMBUKA
+===================================================== */
+
+.opening {
+
+    max-width: none;
+
+    background: linear-gradient(145deg, #f4f8fc 0%, #e8f2fa 55%, #f4f8fc 100%);
+
+}
+
+
+.section.opening {
+    padding-top: 80px;
+}
+
+
+.opening > .quote,
+.opening > .ayat,
+.opening > .description {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.quote {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 25px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+}
+
+
+.ayat {
+
+    color: var(--gold);
+
+    margin: 15px 0 42px;
+
+    font-size: 13px;
+
+}
+
+
+.description {
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   MEMPELAI
+===================================================== */
+
+.couple-section {
+
+    background: linear-gradient(135deg, #eaf3fa 0%, #dfeaf4 100%);
+
+    max-width: none;
+
+}
+
+
+.section.couple-section {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+
+.couple {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.person {
+
+    width: 280px;
+
+}
+
+
+.photo-frame {
+
+    width: 210px;
+
+    height: 270px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 120px 120px 20px 20px;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.10);
+
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.person h3 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 35px;
+
+    color: var(--sage-dark);
+
+    margin-top: 20px;
+
+}
+
+
+.child-of {
+
+    color: #8a8a7f;
+
+    font-size: 13px;
+
+}
+
+
+.ampersand {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 60px;
+
+    color: var(--gold);
+
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown-section {
+
+    width: calc(100% + 50px);
+
+    margin-left: -25px;
+
+    padding: 44px 0 32px;
+
+    background: linear-gradient(135deg, #e7f1f9 0%, #f4f8fb 55%, #e4eff8 100%);
+
+    color: var(--text);
+
+}
+
+
+.countdown-section .section-title {
+
+    color: var(--sage-dark);
+
+}
+
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.count-box {
+
+    width: 90px;
+
+    height: 90px;
+
+    background: rgba(61, 96, 126, 0.1);
+
+    border:
+        1px solid rgba(47, 79, 107, 0.24);
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.count-box span {
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+}
+
+
+.count-box small {
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   EVENT
+===================================================== */
+
+.event-section {
+
+    background: linear-gradient(140deg, #f3f8fc 0%, #e7f0f7 100%);
+
+}
+
+
+.event-card {
+
+    max-width: 520px;
+
+    margin: 35px auto 25px;
+
+    padding: 115px 30px 40px;
+
+    background: white;
+
+    border-radius: 50% 50% 0 0 / 100px 100px 0 0;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.06);
+
+}
+
+
+.event-icon {
+
+    color: var(--gold);
+
+    font-size: 25px;
+
+}
+
+
+.event-details + .event-details {
+    margin-top: 32px;
+}
+
+
+.event-card h3 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 32px;
+
+    color: var(--sage-dark);
+
+}
+
+
+.event-date {
+
+    font-weight: 600;
+
+    margin: 10px 0;
+
+}
+
+
+.event-location {
+
+
+    color: var(--sage-dark);
+
+    font-weight: 600;
+
+    margin-top: 20px;
+
+}
+
+
+/* =====================================================
+   GALERI
+===================================================== */
+
+.gallery-section {
+
+    background: linear-gradient(135deg, #e4eff7 0%, #f2f7fb 55%, #e4eff7 100%);
+
+    max-width: none;
+
+}
+
+
+.gallery {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+}
+
+
+.gallery img {
+
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 3 / 4;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 10px;
+
+    transition: 0.4s;
+
+}
+
+
+.gallery img:hover {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =====================================================
+   RSVP
+===================================================== */
+
+.gift-rsvp-section {
+    max-width: none;
+    padding: 70px 24px;
+    background: linear-gradient(145deg, #f0f7fb 0%, #e4eff8 60%, #f4f8fb 100%);
+}
+
+
+.gift-rsvp-content {
+    max-width: 720px;
+    margin: auto;
+    text-align: center;
+}
+
+
+.gift-title {
+    margin-bottom: 20px;
+    color: var(--sage-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 7vw, 48px);
+    text-transform: uppercase;
+    text-shadow: 0 3px 0 rgba(179, 154, 98, 0.28), 0 8px 18px rgba(75, 85, 69, 0.16);
+}
+
+
+.gift-description {
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
+
+
+.gift-details {
+    margin: 28px auto 0;
+    max-width: 380px;
+}
+
+
+.gift-details summary {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: var(--sage);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+}
+
+
+.gift-details summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.gift-details summary::after {
+    content: " +";
+}
+
+
+.gift-details[open] summary::after {
+    content: " -";
+}
+
+
+.gift-details .rekening {
+    margin: 16px auto 0;
+    border-radius: 8px;
+}
+
+
+.wishes-rsvp {
+    max-width: 600px;
+    margin: 56px auto 0;
+    padding-top: 38px;
+    border-top: 1px solid var(--cream-dark);
+}
+
+
+.wishes-title {
+    margin-bottom: 8px;
+    color: var(--sage-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+}
+
+
+.wishes-copy {
+    margin-bottom: 24px;
+}
+
+
+.rsvp-form {
+    display: grid;
+    gap: 16px;
+    text-align: left;
+}
+
+
+.form-field {
+    display: grid;
+    gap: 6px;
+}
+
+
+.form-field label {
+    color: var(--sage-dark);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #c9cbbf;
+    border-radius: 6px;
+    background: white;
+    color: var(--text);
+    font: inherit;
+}
+
+
+.form-field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+.rsvp-submit {
+    justify-self: center;
+    margin-top: 8px;
+}
+
+
+.gift-rsvp-section .final-thankyou {
+    margin-top: 42px;
+}
+
+
+.gift-rsvp-section .final-thankyou p {
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   GIFT
+===================================================== */
+
+.rekening {
+
+    max-width: 350px;
+
+    margin: 30px auto 0;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+}
+
+
+.rekening h3 {
+
+    color: #174a8b;
+
+}
+
+
+.rekening-number {
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    margin: 10px 0;
+
+}
+
+
+/* =====================================================
+   CLOSING
+===================================================== */
+
+.closing-message {
+
+    max-width: 700px;
+
+}
+
+
+/* =====================================================
+   KELUARGA
+===================================================== */
+
+.family-section {
+
+    background: linear-gradient(145deg, #f0f7fb 0%, #e4eff8 60%, #f4f8fb 100%);
+
+    color: var(--text);
+
+}
+
+
+.family-section > .section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0 auto;
+    padding-bottom: 24px;
+}
+
+
+.family-section .section-title {
+
+    color: var(--sage-dark);
+
+    margin-bottom: 12px;
+
+}
+
+
+.family-container {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 40px;
+
+}
+
+
+.family h3 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    color: var(--sage-dark);
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.family p {
+
+    font-size: 14px;
+
+}
+
+
+.final-names {
+
+    margin-top: 70px;
+
+}
+
+
+.final-names h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 45px;
+
+    color: #e4d5a8;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 25px;
+
+    background: #414c3f;
+
+    color: rgba(255,255,255,0.7);
+
+    text-align: center;
+
+    font-size: 11px;
+
+}
+
+
+.family-section .family-footer {
+    margin-top: auto;
+    padding: 24px 0 0;
+    border-top: 1px solid rgba(79, 93, 76, 0.2);
+    background: transparent;
+    color: rgba(75, 85, 69, 0.72);
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-button {
+
+    position: fixed;
+
+    z-index: 9999;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid white;
+
+    background: var(--sage);
+
+    color: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.2);
+
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE HP
+===================================================== */
+
+@media (max-width: 700px) {
+
+
+    .section {
+
+        padding: 65px 20px;
+
+    }
+
+
+    .cover-content {
+
+        padding: 20px;
+
+    }
+
+
+    .cover h1 {
+
+        font-size: clamp(42px, 14vw, 60px);
+
+    }
+
+
+    .cover h1 span {
+
+        margin: 0 5px;
+
+    }
+
+
+    .countdown-section {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+    }
+
+
+    .couple {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        white-space: normal;
+
+    }
+
+
+    .ampersand {
+        display: block;
+        font-size: 45px;
+
+    }
+
+
+    .cover h1 .cover-name {
+        display: block;
+    }
+
+    .cover h1 .cover-ampersand {
+        font-size: 55%;
+        display: block;
+        margin: 0;
+        line-height: 0.7;
+    }
+    .person {
+
+        margin-top: 38px;
+
+    }
+
+
+    .photo-frame {
+
+        width: 190px;
+
+        height: 240px;
+
+    }
+
+
+    .count-box {
+
+        width: 72px;
+
+        height: 75px;
+
+    }
+
+
+    .count-box span {
+
+        font-size: 22px;
+
+    }
+
+
+    .gallery {
+
+        max-width: 380px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .gallery img {
+
+        height: auto;
+
+    }
+
+
+    .family-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .final-names {
+
+        margin-top: 50px;
+
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+
+    .cover h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    .count-box {
+
+        width: 65px;
+
+        height: 70px;
+
+    }
+
+
+    .gallery img {
+
+        height: auto;
+
+    }
+
+}
+
+/* =====================================================
+   VIDEO BACKSOUND
+===================================================== */
+
+#musik {
+
+    display: none;
+
+}
+
+/* =====================================================
+   ANIMASI MUNCUL DARI BAWAH
+===================================================== */
+
+.fade-up,
+.fade-photo,
+.fade-title {
+
+    opacity: 0;
+
+}
+
+
+/* =====================================================
+   TULISAN MUNCUL DARI BAWAH
+===================================================== */
+
+.fade-up,
+.fade-title {
+
+    transform: translateY(60px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+    transition-delay: var(--reveal-delay, 0ms);
+
+}
+
+
+/* =====================================================
+   FOTO MUNCUL DARI BAWAH + ZOOM
+===================================================== */
+
+.fade-photo {
+
+    transform:
+        translateY(60px)
+        scale(0.85);
+
+    transition:
+        opacity 1.3s ease,
+        transform 1.3s ease;
+
+    transition-delay: var(--reveal-delay, 0ms);
+
+}
+
+
+/* =====================================================
+   SAAT SUDAH MUNCUL
+===================================================== */
+
+.fade-up.muncul,
+.fade-title.muncul {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.fade-photo.muncul {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =====================================================
+   DELAY
+===================================================== */
+
+.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.delay-2 {
+    transition-delay: 0.4s;
+}
+
+.delay-3 {
+    transition-delay: 0.6s;
+}
+
+.delay-4 {
+    transition-delay: 0.8s;
+}
+
+
+/* =====================================================
+   ANIMASI COVER
+===================================================== */
+
+.cover-content {
+
+    animation:
+        coverMasuk 2s ease forwards;
+
+}
+
+
+@keyframes coverMasuk {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   ANIMASI ORNAMEN COVER
+===================================================== */
+
+.cover .ornament {
+
+    animation:
+        ornamentMasuk 2s ease forwards;
+
+}
+
+
+@keyframes ornamentMasuk {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.5);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+/* =====================================================
+   BUNGA DI SETIAP SUDUT
+===================================================== */
+
+.bunga-sudut {
+    position: fixed;
+    z-index: 1;
+    width: 110px;
+    height: auto;
+
+    opacity: 0.8;
+
+    pointer-events: none;
+
+    animation: bungaMuncul 2s ease forwards;
+}
+
+
+/* KIRI ATAS */
+
+.bunga-kiri-atas {
+    top: -2px;
+    left: -2px;
+
+    transform: scale(-1);
+}
+
+
+/* KANAN ATAS */
+
+.bunga-kanan-atas {
+    top: -2px;
+    right: -2px;
+
+    transform: scaleY(-1);
+}
+
+
+/* KIRI BAWAH */
+
+.bunga-kiri-bawah {
+    bottom: -2px;
+    left: -2px;
+
+    transform: scaleX(-1);
+}
+
+
+/* KANAN BAWAH */
+
+.bunga-kanan-bawah {
+    bottom: -2px;
+    right: -2px;
+}
+
+
+/* ANIMASI BUNGA */
+
+@keyframes bungaMuncul {
+
+    from {
+        opacity: 0;
+        scale: 0.7;
+    }
+
+    to {
+        opacity: 0.8;
+        scale: 1;
+    }
+
+}
+
+
+/* =====================================================
+   UKURAN HP
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .bunga-sudut {
+        width: 82px;
+    }
+
+    .bunga-kiri-atas {
+        top: -2px;
+        left: -2px;
+    }
+
+    .bunga-kanan-atas {
+        top: -2px;
+        right: -2px;
+    }
+
+    .bunga-kiri-bawah {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    .bunga-kanan-bawah {
+        bottom: -2px;
+        right: -2px;
+    }
+
+}
+
+
+.countdown-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+
+.cover-disclaimer {
+    max-width: 360px;
+    margin: 18px auto 0;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 11px;
+    line-height: 1.5;
+}
